@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 100 - Empowering Underprivileged Youth Globally</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="p (5).jpeg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary-red: #e30613;
+        --dark-red: #c00511;
+        --light-red: #ff4d4d;
+        --white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #e9ecef;
+        --dark-gray: #495057;
+        --black: #212529;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-red) !important;
+        font-size: 1.8rem;
+      }
+      
+      .nav-link {
+        color: var(--dark-gray) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        margin: 0 0.2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--dark-red);
+        border-color: var(--dark-red);
+      }
+      
+      .btn-outline-primary {
+        color: var(--primary-red);
+        border-color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .btn-outline-primary:hover {
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
+      }
+      
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.dineandpack.com.ng/forms/sep7-20.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 8rem 0;
+        text-align: center;
+      }
+      
+      .section-title {
+        position: relative;
+        margin-bottom: 3rem;
+        color: var(--primary-red);
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-red);
+      }
+      
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+      }
+      
+      .bg-light-red {
+        background-color: rgba(227, 6, 19, 0.05);
+      }
+      
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 4rem 0 2rem;
+      }
+      
+      .footer-links h5 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .footer-links a {
+        color: var(--medium-gray);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+      
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255,255,255,0.1);
+        color: var(--white);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        background-color: var(--primary-red);
+        transform: translateY(-3px);
+      }
+      
+      .testimonial-card {
+        background-color: var(--white);
+        border-left: 4px solid var(--primary-red);
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
+      
+      .testimonial-author {
+        color: var(--primary-red);
+        font-weight: 600;
+      }
+      
+      .partner-logo {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+      
+      .cta-section {
+        background: linear-gradient(rgba(227, 6, 19, 0.9), rgba(227, 6, 19, 0.9)), url('vj (3).webp');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 5rem 0;
+        text-align: center;
+      }
+      
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      .breadcrumb-item a {
+        color: var(--dark-gray);
+        text-decoration: none;
+      }
+      
+      .breadcrumb-item.active {
+        color: var(--primary-red);
+      }
+      
+      .breadcrumb-item+.breadcrumb-item::before {
+        content: ">";
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Project<span style="color: var(--black)">100</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="what-we-do.html"> Programs</a>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blessedfeet.html">BlessedFeet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media </a>
+            </li>
+
+            <!-- Get Involved page does'nt exist -->
+          <!-- 
+              <li class="nav-item">
+              <a class="nav-link" href="Involved.html">Get Involved</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary" href="donate.html">Donate Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero-section" style="position: relative; min-height: 100vh; overflow: hidden; background-color: #000;">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    webkit-playsinline
+    preload="auto"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"
+  >
+    <source src="https://cdn.pixabay.com/video/2025/04/27/275172_tiny.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container" style="position: relative; z-index: 2; padding: 15vh 20px 0; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+    <h2 class="display-4 fw-bold mb-4">Empowering lives, Transforming Communities</h2>
+    <p class="lead mb-5">One Individual at a Time.</p>
+    <a href="what-we-do.html" class="btn btn-primary btn-lg me-2">Our Programs</a>
+    <a href="gallery.html" class="btn btn-outline-light btn-lg">Gallery</a>
+  </div>
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); z-index: 1;"></div>
+</section>
+
+
+   <!-- About Section -->
+<section class="py-5">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <span class="text-uppercase text-primary-red fw-bold">About Us</span>
+        <h2 class="section-title mb-4">Who We Are</h2>
+        <p class="lead"> </p>
+        <p> Project100 is a social impact initiative launched to empower underprivileged youth and underserved communities through targeted interventions. Rooted in our mission to unlock potential and build capacity, we combine hands-on mentorship, structured training, and community-based support to drive sustainable change.
+Initially established as a CSR initiative of Dine & Pack Ltd, Project100 aims to address the critical needs of the less privileged through Community Interventions, comprehensive training and support programs.
+Since Inception, we have directly and indirectly impacted over 2,000 individuals from underserved communities, helping them to live better lives, unlock potential and launch micro-businesses.</p>
+        <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="impact-number" data-target="3000">0</div>
+                <p class="mb-0">Lives Impacted</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="impact-number" data-target="50">0</div>
+                <p class="mb-0">Dedicated Volunteers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="impact-number" data-target="15">0</div>
+                <p class="mb-0">Communities Reached</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="impact-number" data-target="105">0</div>
+                <p class="mb-0">Business Support </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this JavaScript at the bottom of your page before closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Counter animation function
+  function animateCounter(element) {
+    const target = +element.getAttribute('data-target');
+    const duration = 2000; // Animation duration in ms
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    
+    let current = start;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        clearInterval(timer);
+        current = target;
+        // Add '+' sign if it's the lives impacted number
+        if (target === 2000) {
+          element.textContent = target.toLocaleString() + '+';
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      } else {
+        element.textContent = Math.floor(current);
+      }
+    }, 16);
+  }
+
+  // Intersection Observer to trigger animation when section is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.impact-number');
+        counters.forEach(counter => {
+          animateCounter(counter);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe the about section
+  const aboutSection = document.querySelector('.py-5');
+  if (aboutSection) {
+    observer.observe(aboutSection);
+  }
+});
+</script>
+
+    <!-- Mission/Vision Section -->
+    <section class="py-5 bg-light-red">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-5">
+                <i class="fas fa-bullseye card-icon"></i>
+                <h3 class="mb-3">Our Mission</h3>
+                <p>
+Empowering the underprivileged through targeted interventions, training, mentorship,
+ and capacity-building programs. Our mission is to unlock their full potential, provide essential skills, 
+and enable them to make meaningful contributions to their immediate societies and the world at large
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-5">
+                <i class="fas fa-eye card-icon"></i>
+                <h3 class="mb-3">Our Vision</h3>
+                <p>
+To create a world where every disadvantaged individual has the opportunity to thrive, 
+empowering them with skills
+ and support needed to overcome barriers and drive positive change in their communities
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+<!-- Programs Section -->
+<section class="py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <span class="text-uppercase text-primary-red fw-bold">What We Do</span>
+      <h2 class="section-title mb-4">Our Core Programs</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">We implement targeted interventions designed to address critical social and economic challenges across communities, with a focus on creating pathways to sustainable growth and development.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-graduation-cap card-icon"></i>
+            <h4>Skill Acquisition and Empowerment</h4>
+            <p>We provide hands-on vocational training and life skills development to equip individuals with the tools they need to become self-reliant.</p>
+            <a href="what-we-do.html#vocational" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-book-open card-icon"></i>
+            <h4>Education Support</h4>
+            <p>From Back-to-School campaigns to the BlessedFeet initiative, we support access to quality education for underserved children and youth.</p>
+            <a href="what-we-do.html#education" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-briefcase card-icon"></i>
+            <h4>Business Support</h4>
+            <p>We offer equipment grants, seed funding, and business development guidance to help small businesses grow sustainably.</p>
+            <a href="what-we-do.html#entrepreneurship" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-people-arrows card-icon"></i>
+            <h4>Mentoring and Training</h4>
+            <p>Structured mentoring and capacity building programs designed to build confidence, leadership, and practical skills.</p>
+            <a href="what-we-do.html#mentorship" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-shoe-prints card-icon"></i>
+            <h4>BlessedFeet Initiative</h4>
+            <p>Providing quality school shoes to children in underserved communities to promote school attendance and dignity.</p>
+            <a href="blessedfeet.html" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <i class="fas fa-hands-helping card-icon"></i>
+            <h4>Community Outreaches</h4>
+            <p>Impactful programs including medical aid, food distribution, and community orientation serving all age groups.</p>
+            <a href="what-we-do.html#outreach" class="btn btn-link ps-0 text-primary-red">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="what-we-do.html" class="btn btn-primary">View All Programs</a>
+    </div>
+  </div>
+</section>
+    <!-- BlessedFeet Section -->
+   <section class="py-5 bg-light-red">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="blessed feeeeet.jpg" alt="BlessedFeet Initiative" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <span class="text-uppercase text-primary-red fw-bold">Featured Initiative</span>
+        <h2 class="section-title mb-4">BlessedFeet</h2>
+        <p class="lead">A nationwide campaign committed to providing over 100,000 high-quality school shoes to children in underserved public schools across Nigeria.</p>
+        <p>In partnership with Bata Nigeria and other key stakeholders, we are producing and distributing durable, locally made school shoes—restoring dignity, improving school attendance, and protecting young feet from injury, harsh terrain, and preventable infections. This initiative is more than footwear—it's a step toward equal opportunity, confidence, and a brighter future for every child.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="blessedfeet.html" class="btn btn-primary">Learn More</a>
+          <a href="donate.html" class="btn btn-outline-primary">Donate Shoes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Get Involved Section -->
+<!-- Get Involved Section -->
+<section class="py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <span class="text-uppercase text-primary-red fw-bold">Take Action</span>
+      <h2 class="section-title mb-3">Together, we can unlock potential and create lasting change.</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">
+        By partnering with Project 100, you help create transformative opportunities and contribute to sustainable community development.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Donate Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100 hover-scale">
+          <div class="card-body p-4 text-center">
+            <div class="icon-box bg-primary-red text-white mb-4 mx-auto">
+              <i class="fas fa-hand-holding-heart fa-2x"></i>
+            </div>
+            <h4 class="mb-3">Donate</h4>
+            <p class="mb-4">
+              Fuel our impact by supporting any of our programs/Initiatives.
+            </p>
+            <a href="donate.html" class="btn btn-primary stretched-link">Make an Impact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100 hover-scale">
+          <div class="card-body p-4 text-center">
+            <div class="icon-box bg-primary-red text-white mb-4 mx-auto">
+              <i class="fas fa-hands-helping fa-2x"></i>
+            </div>
+            <h4 class="mb-3">Volunteer</h4>
+            <p class="mb-4">
+              Offer your time or skills as a volunteer, mentor, trainer, or facilitator. Just a few hours can help shape a young person's future.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" 
+               class="btn btn-primary stretched-link">Join Our Team</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread the Word Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100 hover-scale">
+          <div class="card-body p-4 text-center">
+            <div class="icon-box bg-primary-red text-white mb-4 mx-auto">
+              <i class="fas fa-share-alt fa-2x"></i>
+            </div>
+            <h4 class="mb-3">Spread the Word</h4>
+            <p class="mb-4">
+              Amplify our mission through your networks. Share our stories and impact across your networks to inspire more people to get involved.
+            </p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="https://www.instagram.com/project_1hundredd/" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://x.com/Project_100hund" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/project-1hundred" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100 hover-scale">
+          <div class="card-body p-4 text-center">
+            <div class="icon-box bg-primary-red text-white mb-4 mx-auto">
+              <i class="fas fa-handshake fa-2x"></i>
+            </div>
+            <h4 class="mb-3">Partner With Us</h4>
+            <p class="mb-4">
+              Collaborate with us through corporate sponsorships, strategic alliances, or community-driven projects to scale our reach and deepen our impact.
+            </p>
+            <a href="contact.html" class="btn btn-primary stretched-link">Explore Partnerships</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Involvement Options -->
+    <div class="row mt-5 pt-3">
+      <div class="col-lg-10 mx-auto">
+        <div class="bg-white p-4 p-lg-5 rounded shadow-sm">
+          <h4 class="text-center mb-4">Other Ways to Get Involved</h4>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary-red">
+                  <i class="fas fa-hands-helping fa-2x"></i>
+                </div>
+                <div>
+                  <h5>Co-Host an Outreach</h5>
+                  <p class="mb-0">Join us in organizing impactful community events and outreach programs</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary-red">
+                  <i class="fas fa-shoe-prints fa-2x"></i>
+                </div>
+                <div>
+                  <h5>Shoe Donations</h5>
+                  <p class="mb-0">Support our BlessedFeet initiative</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary-red">
+                  <i class="fas fa-bullhorn fa-2x"></i>
+                </div>
+                <div>
+                  <h5>Become an Ambassador</h5>
+                  <p class="mb-0">Represent Project100 in your community</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-5px);
+  }
+  .icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+  <!-- Founder Section -->
+<section class="py-5 bg-light-red">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Founder Image -->
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="position-relative">
+          <img src="founder.jpeg" alt="Shetu Gamaliel - Founder of Project100" class="img-fluid rounded shadow-lg">
+          <div class="position-absolute bottom-0 start-0 bg-primary-red text-white p-3">
+            <h5 class="mb-0">Founder & CEO</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Founder Bio -->
+      <div class="col-lg-7">
+        <span class="text-uppercase text-primary-red fw-bold">Leadership</span>
+        <h2 class="section-title mb-4">Our Founder</h2>
+        
+        <h3 class="text-dark mb-3">Shetu Gamaliel</h3>
+        <p class="lead fst-italic">Dynamic culinary entrepreneur, educator, and impact-driven changemaker</p>
+        
+        <div class="founder-bio">
+          <p>Shetu Gamaliel is a visionary leader and social entrepreneur based in Abuja, Nigeria, whose multifaceted career bridges culinary excellence and youth empowerment.</p>
+          
+          
+          
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> World-class culinary instruction</li>
+            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Practical business training</li>
+            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Entrepreneurial mentorship</li>
+            <li class="mb-2"><i class="fas fa-check-circle text-primary-red me-2"></i> Personal development coaching</li>
+          </ul>
+          
+          <p>This comprehensive model produces graduates who excel both in culinary arts and business management, creating ripple effects throughout their communities.</p>
+          
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="Biography.html" class="btn btn-primary">
+              <i class="fas fa-book-open me-2"></i> Full Biography
+            </a>
+            <a href="https://www.linkedin.com/in/shetu-gamaliel-101008216/" class="btn btn-outline-primary" target="_blank">
+              <i class="fab fa-linkedin-in me-2"></i> Connect
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+</section>
+
+     <!-- Governance Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Our Commitment</span>
+          <h2 class="section-title mb-4">Governance & Transparency</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">We uphold the highest standards of accountability and ethical practices in all our operations</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-shield-alt card-icon"></i>
+                <h5>Accountability</h5>
+                <p>We maintain rigorous financial controls and regular audits to ensure proper use of funds and resources.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h5>Impact Measurement</h5>
+                <p>We systematically track and report on program outcomes and beneficiary progress using standardized metrics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-handshake card-icon"></i>
+                <h5>Ethical Partnerships</h5>
+                <p>We carefully vet all partners and collaborators to ensure alignment with our values and mission.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-file-alt card-icon"></i>
+                <h5>Documentation</h5>
+                <p>Comprehensive records of all activities, expenditures, and decisions are maintained for transparency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       
+    </section>
+  <!-- Press Coverage Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">In The News</span>
+          <h2 class="section-title mb-4">Press Coverage</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">See how media outlets are covering our work and impact.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Press Item 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000892252.jpg?w=1067&ssl=1" class="card-img-top" alt="Project 100 Zhidu Community Outreach">
+              <div class="card-body">
+                <span class="media-category">Featured Story</span>
+                <h3 class="card-title my-3">Project 100 Initiative Ignites Hope in Zhidu Community</h3>
+                <p class="card-text">Medical aid, empowerment programs and sustainable solutions brought to the Zhidu community through Project 100's outreach initiative.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Street Reporters | May 11, 2025</small>
+                  <a href="https://timenigeria.com/project-100-brings-hope-to-zhidu-30-children-get-scholarships-dozens-receive-shoes-and-school-supplies-in-back-to-school-drive/" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Press Item 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="xz (5).jpg" class="card-img-top" alt="Chef Mimi's Project 100">
+              <div class="card-body">
+                <span class="media-category">Feature Story</span>
+                <h3 class="card-title my-3">Chef Mimi's Project 100 Takes Empowerment to New Heights</h3>
+                <p class="card-text">Feature on how Shetu Gamaliel's Project 100 is transforming lives through skills acquisition and mentorship programs.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Nairaland | April 28, 2025</small>
+                  <a href="https://www.nairaland.com/8431510/chef-mimis-project-100-takes" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Press Item 3 - Newly Added Article -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/06/IMG-20250623-WA0188.jpg?resize=1536%2C2048&ssl=1 " class="card-img-top" alt="Chef Mimi Honored as Ambassador">
+              <div class="card-body">
+                <span class="media-category">Honors & Recognition</span>
+                <h3 class="card-title my-3">Chef Mimi Honoured as Girls and Women Speak Ambassador</h3>
+                <p class="card-text">Shetu Gamaliel recognized for her humanitarian work, expands impact with national school shoe campaign for underprivileged children.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Street Reporters | June 25, 2025</small>
+                  <a href="https://abujabizreports.com/2025/10/30/project100-spreads-joy-in-zhidu-30-pupils-win-scholarships-dozens-receive-shoes-and-school-supplies-in-inspiring-back-to-school-drive/" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Press Item 4 - Moved previous item 3 here -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://i0.wp.com/streetreporters.ng/wp-content/uploads/2025/05/1000899408.jpg?w=1218&ssl=1" class="card-img-top" alt="Project 100 Medical Outreach">
+              <div class="card-body">
+                <span class="media-category">Community Impact</span>
+                <h3 class="card-title my-3">Medical Aid and Empowerment for Underserved Communities</h3>
+                <p class="card-text">Detailed coverage of Project 100's comprehensive outreach program providing healthcare and skills training.</p>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">Street Reporters | May 11, 2025</small>
+                  <a href="https://timenigeria.com/project-100-brings-hope-to-zhidu-30-children-get-scholarships-dozens-receive-shoes-and-school-supplies-in-back-to-school-drive/" target="_blank" class="btn btn-sm btn-outline-primary">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <span class="text-uppercase text-primary-red fw-bold">Behind The Scenes</span>
+          <h2 class="section-title mb-4">Video Showcase</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Watch our impactful moments and hear directly from beneficiaries of our programs.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Video 1 -->
+          <div class="col-md-6">
+            <div class="card video-card h-100">
+              <div class="card-body p-0">
+                <div class="video-container">
+                  <iframe src="https://www.youtube.com/embed/57wxSUsE8b8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-4">
+                  <h3 class="card-title">Project 100 Community Outreach Highlights</h3>
+                  <p class="card-text">Short video showcasing our recent community outreach program in Zhidu, bringing medical aid and empowerment to underserved areas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video 2 -->
+          <div class="col-md-6">
+            <div class="card video-card h-100">
+              <div class="card-body p-0">
+                <div class="video-container">
+                  <iframe src="https://www.youtube.com/embed/_-PmCqjq9lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-4">
+                  <h3 class="card-title">BlessedFeet Shoe Distribution Moments</h3>
+                  <p class="card-text">Heartwarming moments from our BlessedFeet initiative, providing school shoes to underprivileged children across Nigeria.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <a href="https://youtube.com/@project100initiative?si=cUyNHT5nykhQc4IK" target="_blank" class="btn btn-primary">
+            <i class="fab fa-youtube me-2"></i> View More Videos on Our Channel
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary-red text-white">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h3 class="mb-3">Join Us in Making a Difference</h3>
+            <p class="mb-0">Whether you want to volunteer, partner with us, or support our programs, your involvement can help transform lives and communities.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="donate.html" class="btn btn-light me-2">Donate Now</a>
+            <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">Join Us in Creating Lasting Change</h2>
+            <p class="lead mb-5">Your support helps us reach more underprivileged youth with life-changing programs and opportunities.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="donate.html" class="btn btn-light btn-lg">Donate Now</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform" class="btn btn-outline-light btn-lg">Volunteer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Project100</h5>
+            <p> </p>
+            <div class="social-icons mt-4">
+              <a href="https://www.instagram.com/project_1hundredd/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/project-1hundred" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://x.com/Project_100hund" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-do.html">Our Programs</a></li>
+              <li><a href="blessedfeet.html">BlessedFeet</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-4">Get Involved</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eODbxEzAftyeRKr_7qCjWMQQSfoxJiq-sVO2NSRbHwxhSg/viewform">Volunteer</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScuAsRWcqlFqH4qfqRoMQEQL8g7K3QyXNK2bvE0DJSXU9LJ_w/viewform?pli=1">Apply for Training</a></li>
+              <li><a href="contact.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5 class="text-white mb-4">Contact Information</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="fas fa-map-marker-alt me-2"></i> 14b, Accra Street, Wuse Zone 5, Abuja</li>
+              <li><i class="fas fa-envelope me-2"></i> Project100@gmail.com</li>
+              <li><i class="fas fa-phone me-2"></i> 08087630000, 07036414313</li>
+            </ul>
+            <div class="mt-4">
+              <a href="donate.html" class="btn btn-primary">Donate Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-4" style="border-color: rgba(255,255,255,0.1);">
+        
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2023 Project100. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!-- <p class="mb-0">A CSR initiative of <a href="https://www.dineandpack.com.ng/" class="text-white">Dine & Pack</a></p> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+      // Simple counter animation for impact numbers
+      document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.impact-number');
+        const speed = 200;
+        
+        function animateCounters() {
+          counters.forEach(counter => {
+            const target = +counter.innerText.replace('+', '');
+            const count = +counter.dataset.count || 0;
+            const increment = target / speed;
+            
+            if(count < target) {
+              counter.dataset.count = Math.ceil(count + increment);
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(animateCounters, 1);
+            } else {
+              counter.innerText = target + '+';
+            }
+          });
+        }
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.5});
+        
+        counters.forEach(counter => {
+          counter.dataset.count = 0;
+          observer.observe(counter.parentElement);
+        });
+      });
+    </script>
+  </body>
+</html>
+
